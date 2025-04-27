@@ -976,4 +976,38 @@ body {
         justify-content: center;
         margin-bottom: 16px;
     }
+}
+
+#site-transition-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+#site-transition-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+}
+#site-transition-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.site-transition-logo img {
+  width: 220px;
+  height: auto;
+  animation: logo-pop 1s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes logo-pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 } 
