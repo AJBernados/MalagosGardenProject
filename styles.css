@@ -827,7 +827,7 @@ body {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: url('Images/aboutendbackground.png') center center/cover no-repeat;
+    background: url('Images/AboutEndBackground.png') center center/cover no-repeat;
     filter: blur(6px) brightness(0.7);
     z-index: 1;
 }
