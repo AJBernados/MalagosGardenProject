@@ -13,10 +13,36 @@ document.addEventListener('DOMContentLoaded', function () {
             images[prev].classList.add('prev');
             current = (current + 1) % images.length;
             images[current].classList.add('active');
-            images[prev].offsetWidth; // force reflow for transition
+            images[prev].offsetWidth; 
             setTimeout(() => {
                 images[prev].classList.remove('prev');
             }, 700);
         }, 9000);
     });
+
+    const overlay = document.getElementById('site-transition-overlay');
+    if (overlay) {
+        overlay.classList.remove('fade-out');
+        setTimeout(() => {
+            overlay.classList.add('fade-out');
+            setTimeout(() => {
+                overlay.classList.remove('active');
+                overlay.style.display = 'none';
+            }, 500); 
+        }, 1200); 
+    }
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href && !href.startsWith('#') && !this.classList.contains('active')) {
+      e.preventDefault();
+      const overlay = document.getElementById('site-transition-overlay');
+      overlay.classList.remove('fade-out');
+      overlay.classList.add('active');
+      overlay.style.display = 'flex';
+      window.location.href = href;
+    }
+  });
 }); 
