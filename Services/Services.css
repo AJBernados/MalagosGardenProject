@@ -1,0 +1,325 @@
+.services-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/garden-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px 120px;
+    margin-top: 180px;
+    z-index: 2;
+    max-width: 1200px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.service-details {
+    background: #f9f9f9;
+    padding: 60px 40px;
+}
+
+.detail-card {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.detail-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.detail-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detail-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-card ul li:last-child {
+    border-bottom: none;
+}
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 60px 20px;
+    }
+
+    .services-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .service-details {
+        padding: 40px 20px;
+    }
+}
+
+header {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.services-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 2500px;
+    background: url('Images/ServicesBackground.png') center center/cover no-repeat;
+    filter: blur(8px) brightness(0.7);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.top-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 60px;
+}
+
+.services-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 220px 0 377px 0;
+    z-index: 2;
+}
+
+.services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.1;
+}
+.services-title span {
+    color: #FF7B33;
+    font-weight: 900;
+}
+
+.services-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 29px;
+    color: #fff;
+    margin-bottom: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: center;
+    max-width: 1000px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    padding-top: 45px;
+}
+
+.activity-card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    background: rgba(0,0,0,0.32);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+.activity-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(255,123,51,0.13);
+    border-color: #FF7B33;
+}
+.service-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    background: none;
+    display: block;
+}
+.service-label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,0.72);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 0 32px;
+    margin: 0;
+    bottom: 0;
+    top: auto;
+    border-radius: 0 0 16px 16px;
+    transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+    z-index: 2;
+    opacity: 1;
+    pointer-events: auto;
+}
+.activity-card:hover .service-label {
+    opacity: 0;
+    pointer-events: none;
+}
+.service-desc {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    background: rgba(0,0,0,0.56);
+    padding: 28px 32px 28px 32px;
+    border-radius: 0 0 16px 16px;
+    margin-top: 0;
+    min-height: 100px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.activity-card:hover .service-desc {
+    opacity: 1;
+    z-index: 2;
+}
+
+@media (max-width: 1200px) {
+    .services-grid {
+        max-width: 100%;
+        gap: 40px 32px;
+    }
+    .activity-card {
+        width: 200px;
+        min-height: 280px;
+    }
+    .service-img {
+        height: 200px;
+    }
+    .service-label {
+        font-size: 16px;
+        padding: 0 12px;
+        height: 50px;
+    }
+    .service-desc {
+        font-size: 14px;
+        padding: 12px 12px 12px 12px;
+    }
+}
+
+.services-divider {
+    border: none;
+    border-top: 2px solid #fff;
+    width: 80%;
+    margin: 80px auto 40px auto;
+    opacity: 0.9;
+} 
