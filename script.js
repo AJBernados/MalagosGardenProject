@@ -45,4 +45,23 @@ document.querySelectorAll('.nav-link').forEach(link => {
       window.location.href = href;
     }
   });
+});
+
+// Top Navigation Scroll Behavior
+let lastScrollTop = 0;
+const topNav = document.querySelector('.top-nav');
+const scrollThreshold = 50; // Minimum scroll amount to trigger hide/show
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+        // Scrolling down
+        topNav.classList.add('hidden');
+    } else {
+        // Scrolling up
+        topNav.classList.remove('hidden');
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }); 

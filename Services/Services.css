@@ -148,15 +148,6 @@ nav {
     pointer-events: none;
 }
 
-.top-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    height: 60px;
-}
-
 .services-section {
     position: relative;
     width: 100%;
