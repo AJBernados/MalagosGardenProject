@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Malagos Garden Resort</title>
+    <title>Contact - Malagos Garden Resort</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="Services.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="192x192" href="../Images/Logo.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../Images/Logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../Images/Logo.png">
     <link rel="shortcut icon" href="../Images/Logo.png">
 </head>
 <body>
@@ -23,54 +23,43 @@
             </div>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">ABOUT</a>
-                <a href="#" class="nav-link active">SERVICES</a>
-                <a href="../Contact/Contact.html" class="nav-link">CONTACT</a>
+                <a href="../Services/Services.html" class="nav-link">SERVICES</a>
+                <a href="#" class="nav-link active">CONTACT</a>
                 <a href="../FAQ/FAQ.html" class="nav-link">FAQ</a>
             </div>
         </div>
     </nav>
-    <section class="services-section">
-        <div class="services-content">
-            <h1 class="services-title">Malagos Garden<br><span>Services</span></h1>
-            <p class="services-desc">
-                At Malagos Garden Resort, we offer more than just a getaway — we deliver a refreshing escape into nature, culture, and relaxation. Nestled in the lush landscapes of Davao City, our eco-friendly resort blends natural beauty with world-class hospitality, creating a haven for families, couples, adventurers, and wellness seekers alike.
-            </p>
-            <hr class="services-divider">
-            <div class="services-grid activities-grid">
-                <div class="activity-card">
-                    <img src="Images/Staycation.png" class="service-img" alt="Staycation">
-                    <div class="service-label">STAYCATION</div>
-                    <div class="service-desc">For a relaxing vacation with the ones you love.</div>
-                </div>
-                <div class="activity-card">
-                    <img src="Images/Wellness.png" class="service-img" alt="Wellness">
-                    <div class="service-label">WELLNESS</div>
-                    <div class="service-desc">For recharging your body, mind, and spirit.</div>
-                </div>
-                <div class="activity-card">
-                    <img src="Images/Attractions.png" class="service-img" alt="Attractions & Tours">
-                    <div class="service-label">ATTRACTIONS & TOURS</div>
-                    <div class="service-desc">For discovering nature, culture, and chocolate magic.</div>
-                </div>
-                <div class="activity-card">
-                    <img src="Images/Outdoor.png" class="service-img" alt="Outdoor Activities">
-                    <div class="service-label">OUTDOOR ACTIVITIES</div>
-                    <div class="service-desc">For fun under the sun, rain, or stars.</div>
-                </div>
-                <div class="activity-card">
-                    <img src="Images/Dining.png" class="service-img" alt="Dining">
-                    <div class="service-label">DINING</div>
-                    <div class="service-desc">For fresh flavors made from farm to fork.</div>
-                </div>
-                <div class="activity-card">
-                    <img src="Images/Events.png" class="service-img" alt="Events & Functions">
-                    <div class="service-label">EVENTS & FUNCTIONS</div>
-                    <div class="service-desc">For celebrating life's special moments naturally.</div>
-                </div>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form-container">
+                <h1>Contact <span>us</span></h1>
+                <p class="contact-subtitle">One step closer to happiness</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">I would like to receive the newsletter.</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <div class="map-container">
+                <div id="map"></div>
+                <p class="address">Malagos, Baguio District, Davao City, 8000</p>
             </div>
         </div>
     </section>
-    <div class="services-bg"></div>
+
     <section class="ContactFooter">
         <div class="footer-container">
             <div class="footer-logo-col">
@@ -82,9 +71,9 @@
                     <ul class="footer-list">
                         <li><a href="../index.html" class="footer-link nav-link">Home</a></li>
                         <li><a href="../index.html" class="footer-link nav-link">About Us</a></li>
-                        <li><a href="#" class="footer-link nav-link">Services</a></li>
+                        <li><a href="../Services/Services.html" class="footer-link nav-link">Services</a></li>
                         <li><a href="../FAQ/FAQ.html" class="footer-link nav-link">FAQ</a></li>
-                        <li><a href="../Contact/Contact.html" class="footer-link nav-link">Contact</a></li>
+                        <li><a href="#" class="footer-link nav-link">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -114,11 +103,19 @@
             Designed and Hand Coded by <span class="footer-author">Buenviaje & Bernados</span> Copyright 2025 - Present
         </div>
     </section>
+
     <div id="site-transition-overlay" class="active">
         <div class="site-transition-logo">
             <img src="../Images/MainLogo.png" alt="Logo" />
         </div>
     </div>
+    <div id="form-success-overlay" class="form-success-overlay">
+      <div class="form-success-message">
+        Thank you for your message! We will get back to you soon.
+      </div>
+    </div>
     <script src="../script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="contact.js"></script>
 </body>
-</html> 
+</html>
