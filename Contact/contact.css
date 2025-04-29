@@ -25,6 +25,9 @@ body::before {
     align-items: center;
     min-height: calc(100vh - 80px);
     padding: 40px 20px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-container {
@@ -39,6 +42,7 @@ body::before {
     position: relative;
     justify-content: center;
     align-items: stretch;
+    z-index: 1;
 }
 
 .contact-form-container {
