@@ -1,1 +1,3 @@
-A project
+Our Project for EDP :)
+
+Status: Unfinished
