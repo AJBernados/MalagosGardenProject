@@ -22,7 +22,6 @@ window.addEventListener('DOMContentLoaded', function () {
     const cardsContainer = document.querySelector('.faq-cards-vertical');
     const leftBtn = document.querySelector('.faq-arrow-left');
     const rightBtn = document.querySelector('.faq-arrow-right');
-
     function createCard(faq, className) {
         const card = document.createElement('div');
         card.className = `faq-card faq-card-vertical ${className}`;
@@ -102,7 +101,6 @@ window.addEventListener('DOMContentLoaded', function () {
         }, 1200); 
     }
 });
-
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function(e) {
     const href = this.getAttribute('href');

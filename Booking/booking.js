@@ -1,7 +1,4 @@
-// Add your booking page JavaScript here
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize carousels for all room cards
     for (let i = 1; i <= 5; i++) {
         const roomCard = document.querySelector(`.RoomCard${i}`);
         if (!roomCard) continue;
@@ -43,12 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (index !== currentIndex) showImage(index);
             });
         });
-
-        // Initial state
         showImage(0);
     }
-
-    // Heart (favorite) toggle
     document.querySelectorAll('.heart-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -56,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Filter button highlighting (UI only)
     function initFilters() {
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
@@ -65,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
-    // Newsletter form (prevent default for now)
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
@@ -75,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Room filter logic
     const filterButtons = document.querySelectorAll('.filter-btn');
     const roomCards = [
         { el: document.querySelector('.RoomCard1'), name: 'Medenilla and Pakpak', type: 'deluxe villa' },
@@ -111,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Filters dropdown logic
     const filtersBtn = document.getElementById('openFilters');
     const filtersDropdown = document.getElementById('filtersDropdown');
     if (filtersBtn && filtersDropdown) {
@@ -127,29 +115,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Booking Modal logic
+    //Modal
     const bookingModal = document.getElementById('bookingModal');
     const bookingModalClose = document.querySelector('.booking-modal-close');
     const roomsGrid = document.querySelector('.rooms-grid');
 
-    // Use event delegation for room card clicks, only if roomsGrid exists
     if (roomsGrid) {
         roomsGrid.addEventListener('click', function(e) {
-            // Find the closest room card
             const card = e.target.closest('.rooms-grid > div');
-            // Prevent if not a card or if clicking on heart/carousel buttons
             if (!card || e.target.closest('.heart-btn') || e.target.closest('.carousel-prev') || e.target.closest('.carousel-next')) return;
             console.log('Room card clicked:', card.className);
             bookingModal.style.display = 'flex';
         });
     }
-    // Close modal on close button
     if (bookingModalClose) {
         bookingModalClose.addEventListener('click', function() {
             bookingModal.style.display = 'none';
         });
     }
-    // Close modal when clicking outside the modal box
+
     if (bookingModal) {
         bookingModal.addEventListener('click', function(e) {
             if (e.target === bookingModal) {
@@ -157,7 +141,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Initialize all features
     initFilters();
 });
