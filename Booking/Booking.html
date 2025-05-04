@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Malagos Garden Resort</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="../Images/Logo.png">
+    <link rel="shortcut icon" href="../Images/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papm6rQ+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo-wrapper">
+                <div class="logo-container">
+                    <img src="../Images/Logo.png" alt="Malagos Logo" class="nav-logo">
+                </div>
+                <span class="nav-logo-text">Malagos Garden Resort</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">ABOUT</a>
+                <a href="../Services/Services.html" class="nav-link">SERVICES</a>
+                <a href="../Contact/Contact.html" class="nav-link">CONTACT</a>
+                <a href="../FAQ/FAQ.html" class="nav-link">FAQ</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="booking-main-section booking-main-offset">
+            <div class="booking-filters-bar">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Deluxe Rooms</button>
+                <button class="filter-btn">Suites</button>
+                <button class="filter-btn">Villas</button>
+                <div class="filters-btn-group">
+                    <button class="filter-btn filters-icon" id="openFilters"><span class="filter-icon"></span>Filters</button>
+                    <div class="filters-dropdown" id="filtersDropdown" tabindex="-1">
+                        <label class="filters-dropdown-option"><input type="checkbox" id="filterAvailable"> Available</label>
+                    </div>
+                </div>
+            </div>
+            <div class="rooms-grid">
+                <!-- Room Card 1 -->
+                <div class="RoomCard1">
+                    <div class="card-image-container">
+                        <div class="carousel-track">
+                            <img class="card-image carousel-img" src="Images/Room1/Room1-1.png" alt="Room 1">
+                            <img class="card-image carousel-img" src="Images/Room1/Room1-2.png" alt="Room 1">
+                            <img class="card-image carousel-img" src="Images/Room1/Room1-3.png" alt="Room 1">
+                            <img class="card-image carousel-img" src="Images/Room1/Room1-4.png" alt="Room 1">
+                        </div>
+                        <button class="heart-btn" aria-label="Favorite"></button>
+                        <button class="carousel-prev">&#10094;</button>
+                        <button class="carousel-next">&#10095;</button>
+                        <div class="price-overlay">₱1000 - 5000 PHP</div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Medenilla and Pakpak</h3>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="RoomCard2">
+                    <div class="card-image-container">
+                        <div class="carousel-track">
+                            <img class="card-image carousel-img" src="Images/Room2/Room2-1.jpg" alt="Room 2">
+                            <img class="card-image carousel-img" src="Images/Room2/Room2-2.jpg" alt="Room 2">
+                            <img class="card-image carousel-img" src="Images/Room2/Room2-3.jpg" alt="Room 2">
+                            <img class="card-image carousel-img" src="Images/Room2/Room2-4.jpg" alt="Room 2">
+                        </div>
+                        <button class="heart-btn" aria-label="Favorite"></button>
+                        <button class="carousel-prev">&#10094;</button>
+                        <button class="carousel-next">&#10095;</button>
+                        <div class="price-overlay">₱1000 - 5000 PHP</div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Stunning Honeymoon Suite</h3>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="RoomCard3">
+                    <div class="card-image-container">
+                        <div class="carousel-track">
+                            <img class="card-image carousel-img" src="Images/Room3/Room3-1.png" alt="Room 3">
+                            <img class="card-image carousel-img" src="Images/Room3/Room3-2.png" alt="Room 3">
+                            <img class="card-image carousel-img" src="Images/Room3/Room3-3.png" alt="Room 3">
+                            <img class="card-image carousel-img" src="Images/Room3/Room3-4.png" alt="Room 3">
+                        </div>
+                        <button class="heart-btn" aria-label="Favorite"></button>
+                        <button class="carousel-prev">&#10094;</button>
+                        <button class="carousel-next">&#10095;</button>
+                        <div class="price-overlay">₱1000 - 5000 PHP</div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Palmera</h3>
+                    </div>
+                </div>
+
+                <!-- Room Card 4 -->
+                <div class="RoomCard4">
+                    <div class="card-image-container">
+                        <div class="carousel-track">
+                            <img class="card-image carousel-img" src="Images/Room4/Room4-1.jpg" alt="Room 4">
+                            <img class="card-image carousel-img" src="Images/Room4/Room4-2.jpg" alt="Room 4">
+                            <img class="card-image carousel-img" src="Images/Room4/Room4-3.jpg" alt="Room 4">
+                            <img class="card-image carousel-img" src="Images/Room4/Room4-4.jpg" alt="Room 4">
+                        </div>
+                        <button class="heart-btn" aria-label="Favorite"></button>
+                        <button class="carousel-prev">&#10094;</button>
+                        <button class="carousel-next">&#10095;</button>
+                        <div class="price-overlay">₱1000 - 5000 PHP</div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Musaenda and Mariposa</h3>
+                    </div>
+                </div>
+
+                <!-- Room Card 5 -->
+                <div class="RoomCard5">
+                    <div class="card-image-container">
+                        <div class="carousel-track">
+                            <img class="card-image carousel-img" src="Images/Room5/Room5-1.jpg" alt="Room 5">
+                            <img class="card-image carousel-img" src="Images/Room5/Room5-2.jpg" alt="Room 5">
+                            <img class="card-image carousel-img" src="Images/Room5/Room5-3.jpg" alt="Room 5">
+                            <img class="card-image carousel-img" src="Images/Room5/Room5-4.jpg" alt="Room 5">
+                        </div>
+                        <button class="heart-btn" aria-label="Favorite"></button>
+                        <button class="carousel-prev">&#10094;</button>
+                        <button class="carousel-next">&#10095;</button>
+                        <div class="price-overlay">₱1000 - 5000 PHP</div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h3>The Legacy</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter-section">
+            <div class="newsletter-bg">
+                <form class="newsletter-form">
+                    <div class="newsletter-titles">
+                        <div class="newsletter-title">NEWSLETTER</div>
+                        <div class="newsletter-subtitle">Stay Up To Date!</div>
+                    </div>
+                    <div class="newsletter-input-group">
+                        <input type="email" class="newsletter-input" placeholder="Your Email..." required>
+                        <button type="submit" class="newsletter-send-btn" aria-label="Send">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 20L21 12L3 4V10L17 12L3 14V20Z" fill="#fff"/></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="ContactFooter">
+            <div class="footer-container">
+                <div class="footer-logo-col">
+                    <img src="../Images/MainLogo.png" alt="Malagos Logo" class="footer-logo">
+                </div>
+                <div class="footer-info-col">
+                    <div class="footer-col">
+                        <h3 class="footer-title">Information</h3>
+                        <ul class="footer-list">
+                            <li><a href="../index.html" class="footer-link nav-link">Home</a></li>
+                            <li><a href="../index.html" class="footer-link nav-link">About Us</a></li>
+                            <li><a href="../Services/Services.html" class="footer-link nav-link">Services</a></li>
+                            <li><a href="../FAQ/FAQ.html" class="footer-link nav-link">FAQ</a></li>
+                            <li><a href="../Contact/Contact.html" class="footer-link nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Services</h3>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Staycation</a></li>
+                            <li><a href="#" class="footer-link">Wellness</a></li>
+                            <li><a href="#" class="footer-link">Attractions & Tours</a></li>
+                            <li><a href="#" class="footer-link">Events & Functions</a></li>
+                            <li><a href="#" class="footer-link">Dining</a></li>
+                            <li><a href="#" class="footer-link">Outdoor Activities</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Reservations</h3>
+                        <ul class="footer-list">
+                            <li class="footer-text">Malagos, Baguio District, Davao City</li>
+                            <li class="footer-text">malagos.reservations2@gmail.com</li>
+                            <li class="footer-text">Globe +63 917 624 5727</li>
+                            <li class="footer-text">Smart +63 919 093 3729</li>
+                            <li class="footer-text">Phone +63 (82) 224 7438</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Designed and Hand Coded by <span class="footer-author">Buenviaje & Bernados</span> Copyright 2025 - Present
+            </div>
+        </section>
+    </main>
+    <div id="bookingModal" class="booking-modal-overlay" style="display:none;">
+        <div class="booking-modal">
+            <button class="booking-modal-close" aria-label="Close">&times;</button>
+            <div class="booking-modal-content">
+                <div class="booking-modal-privacy">
+                    <span class="booking-modal-privacy-icon">&#9888;</span>
+                    <span>Data Privacy<br>
+                    By using this booking engine, you agree to be subjected to our <a href="#" class="booking-modal-link">Data Privacy Policy</a></span>
+                </div>
+                <div class="booking-modal-main">
+                    <div class="booking-modal-section">
+                        <div class="booking-modal-label">Reservation Dates</div>
+                        <div class="booking-modal-dates">
+                            <div class="booking-modal-date-row">
+                                <span class="booking-modal-date-label">From</span>
+                                <i class="fa-solid fa-calendar-days booking-modal-date-icon"></i>
+                                <span class="booking-modal-date-value">(Wednesday) April 23, 2025</span>
+                            </div>
+                            <div class="booking-modal-date-row">
+                                <span class="booking-modal-date-label">To</span>
+                                <i class="fa-solid fa-arrow-right booking-modal-date-icon"></i>
+                                <span class="booking-modal-date-value">(Thursday) April 24, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-modal-section">
+                        <div class="booking-modal-label">Total No of Guests</div>
+                        <div class="booking-modal-guests">
+                            <div class="booking-modal-date-row">
+                                <span class="booking-modal-date-label">Adults</span>
+                                <i class="fa-solid fa-user booking-modal-guest-icon"></i>
+                                1 adult <button class="booking-modal-guest-btn">-</button> <button class="booking-modal-guest-btn">+</button>
+                            </div>
+                            <div class="booking-modal-date-row">
+                                <span class="booking-modal-date-label">Children</span>
+                                <i class="fa-solid fa-child booking-modal-guest-icon"></i>
+                                0 children <button class="booking-modal-guest-btn">-</button> <button class="booking-modal-guest-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-modal-footer">
+                    <button class="booking-modal-check-btn">CHECK AVAILABILITY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="booking.js"></script>
+</body>
+</html> 
