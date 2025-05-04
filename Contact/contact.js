@@ -17,9 +17,10 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     const email = document.getElementById('email').value;
     const name = document.getElementById('name').value;
     const message = document.getElementById('message').value;
+    const department = document.getElementById('department').value;
     const newsletter = document.getElementById('newsletter').checked;
 
-    console.log('Form submitted:', { email, name, message, newsletter });
+    console.log('Form submitted:', { email, name, message, department, newsletter });
     
     this.reset();
 
