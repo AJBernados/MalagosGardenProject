@@ -64,10 +64,8 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     function animatePrev() {
-        // Calculate indices
         const prevIndex = (currentFAQ - 1 + faqs.length) % faqs.length;
         const nextIndex = (currentFAQ + 1) % faqs.length;
-        // Clear and render three cards: prev (above), active (center), next (below)
         cardsContainer.innerHTML = '';
         const prevCard = createCard(faqs[prevIndex], 'prev-in');
         const activeCard = createCard(faqs[currentFAQ], 'active');
@@ -75,7 +73,7 @@ window.addEventListener('DOMContentLoaded', function () {
         cardsContainer.appendChild(prevCard);
         cardsContainer.appendChild(activeCard);
         cardsContainer.appendChild(nextCard);
-        // Animate
+  
         setTimeout(() => {
             prevCard.classList.add('slide-in-prev');
             activeCard.classList.add('slide-down');
@@ -90,8 +88,6 @@ window.addEventListener('DOMContentLoaded', function () {
         leftBtn.addEventListener('click', animatePrev);
         rightBtn.addEventListener('click', animateNext);
     }
-
-    // Initial render
     renderCards();
 
     const overlay = document.getElementById('site-transition-overlay');

@@ -47,19 +47,17 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// Top Navigation Scroll Behavior
+//Top Navigation Scroll 
 let lastScrollTop = 0;
 const topNav = document.querySelector('.top-nav');
-const scrollThreshold = 50; // Minimum scroll amount to trigger hide/show
+const scrollThreshold = 50; 
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     
     if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-        // Scrolling down
         topNav.classList.add('hidden');
     } else {
-        // Scrolling up
         topNav.classList.remove('hidden');
     }
     
